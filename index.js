@@ -1,6 +1,7 @@
 var cool = require('cool-ascii-faces');
 var express = require('express');
 var app = express();
+var my_verify = 'verify';
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -19,7 +20,7 @@ app.get('/cool', function(request, response) {
 });
 
 app.get('/webhook', function (request, response) {
-  if (request.query['hub_verify_token'] === "verify") {
+  if (request.query['hub_verify_token'] === my_verify) {
     response.send(req.query['hub_challenge']);
   } else {
     response.send('Error, wrong validation token');    
