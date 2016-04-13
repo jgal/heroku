@@ -18,11 +18,11 @@ app.get('/cool', function(request, response) {
 	response.send(cool());
 });
 
-app.get('/webhook', function (req, res) {
-  if (req.query['hub.verify_token'] === verify) {
-    res.send(req.query['hub.challenge']);
+app.get('/webhook', function (request, response) {
+  if (request.query['hub.verify_token'] === 'verify') {
+    response.send(req.query['hub.challenge']);
   } else {
-    res.send('Error, wrong validation token');    
+    response.send('Error, wrong validation token');    
   }
 });
 
