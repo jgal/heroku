@@ -20,7 +20,7 @@ app.get('/cool', function(request, response) {
 	response.send(cool());
 });
 
-app.get('/webhook', function (request, response) {
+app.get('/facebook/receive', function (request, response) {
   if (request.query['hub.verify_token'] === my_verify) {
     response.send(request.query['hub.challenge']);
   } else {
