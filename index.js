@@ -20,11 +20,11 @@ app.get('/cool', function(request, response) {
 });
 
 app.get('/webhook', function (request, response) {
-  //if (request.query['hub_verify_token'] === my_verify) {
-    response.send(request.query['hub_challenge']);
-  //} else {
-    //response.send('Error, wrong validation token');    
-  //}
+  if (request.query['hub.verify_token'] === my_verify) {
+    response.send(request.query['hub.challenge']);
+  } else {
+    response.send('Error, wrong validation token');    
+  }
 });
 
 app.listen(app.get('port'), function() {
