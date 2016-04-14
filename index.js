@@ -28,7 +28,7 @@ app.get('/facebook/receive', function (request, response) {
   }
 });
 
-app.post('/webhook', function (req, res) {
+/*app.post('/webhook', function (req, res) {
   messaging_events = req.body.entry[0].messaging;
   for (i = 0; i < messaging_events.length; i++) {
     event = req.body.entry[0].messaging[i];
@@ -60,7 +60,7 @@ function sendTextMessage(sender, text) {
       console.log('Error: ', response.body.error);
     }
   });
-}
+}*/
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
