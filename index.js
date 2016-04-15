@@ -41,6 +41,7 @@ app.post('/webhook/', function (req, res) {
               sendTextMessage(sender, "Jaankabot")
             } else 
               sendTextMessage(sender, "Text received: " + text.substring(0, 200))
+            
         }
     }
     res.sendStatus(200)
