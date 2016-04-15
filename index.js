@@ -37,7 +37,7 @@ app.post('/webhook/', function (req, res) {
         if (event.message && event.message.text) {
             text = event.message.text
 
-            if (text === "What's your name?") {
+            if (text.substring(0, 200) === "What's your name?") {
               sendTextMessage(sender, "Jaankabot")
             } else 
               sendTextMessage(sender, "Text received: " + text.substring(0, 200))
