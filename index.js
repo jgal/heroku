@@ -28,6 +28,10 @@ app.get('/cloud', function(request, response) {
     response.render('pages/cloud');
 });
 
+app.get('/canvas', function(request, response) {
+    response.render('pages/canvas');
+});
+
 // for Facebook verification
 app.get('/webhook/', function (req, res) {
     if (req.query['hub.verify_token'] === 'my_voice_is_my_password_verify_me') {
