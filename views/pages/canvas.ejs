@@ -164,7 +164,9 @@ function saveImage() {
       // so it can be saved as an image
 
       var img = document.getElementById("canvasImg");
-      img.src = "https://www.hallaminternet.com/assets/URL-tagging-image.png";
+      //img.src = "https://www.hallaminternet.com/assets/URL-tagging-image.png";  
+      img.src = dataURL;
+
       document.getElementById('content').appendChild(img); 
 }
         
