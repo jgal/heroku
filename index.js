@@ -16,6 +16,22 @@ app.get('/', function (req, res) {
     res.send('Hello world, I am a chat bot')
 })
 
+// views is directory for all template files
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
+app.get('/', function(request, response) {
+  response.render('pages/index');
+});
+
+app.get('/cool', function(request, response) {
+    response.send(cool());
+});
+
+app.get('/cloud', function(request, response) {
+    response.send(cloud());
+});
+
 // for Facebook verification
 app.get('/webhook/', function (req, res) {
     if (req.query['hub.verify_token'] === 'my_voice_is_my_password_verify_me') {
