@@ -79,7 +79,6 @@ body {
     bottom: 46px;
     overflow:hidden;
     background-color:#00FFFF;
-    text-align: right
 }
 
 #canvasImg{
@@ -165,6 +164,7 @@ function saveImage() {
       // so it can be saved as an image
 
       var img = document.getElementById("canvasImg");
+      img.style.textAlign = "right";
       //img.src = "https://www.hallaminternet.com/assets/URL-tagging-image.png";  
       img.src = dataURL;
 
