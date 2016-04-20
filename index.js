@@ -29,7 +29,7 @@ app.get('/cool', function(request, response) {
 });
 
 app.get('/cloud', function(request, response) {
-    response.send('hi');
+    response.render('pages/cloud');
 });
 
 // for Facebook verification
