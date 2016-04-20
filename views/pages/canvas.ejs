@@ -143,6 +143,15 @@ function newCanvas(){
     drawPointer();
     drawMouse();
 }
+
+function saveImage() {
+        // save canvas image as data url (png format by default)
+      var dataURL = document.getElementById("canvas").toDataURL();
+
+      // set canvasImg image src to dataURL
+      // so it can be saved as an image
+      document.getElementById('canvasImg').src = dataURL;
+}
         
 function selectColor(el){
     for(var i=0;i<document.getElementsByClassName("palette").length;i++){
@@ -222,12 +231,15 @@ var drawMouse = function() {
   </script>
 </head>
 <body>
+
+
 <div id="page">
     <div class="header">
     <a id="new" class="navbtn" onclick="newCanvas()">New</a>
-        <div class="title">Lines</div>
     <a id="save" class="navbtn" onclick="saveImage()">Save</a>
+        <div class="title">Lines</div>
     </div>
+    <img id="canvasImg" alt="Right click to save me!">
     <div id="content"><p style="text-align:center">Loading Canvas...</p></div>
     <div class="footer">
     <div class="palette-case">
