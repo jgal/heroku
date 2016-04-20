@@ -24,8 +24,10 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+var title = 'heyyy'
+
 app.get('/cloud', function(request, response) {
-    response.render('pages/cloud');
+    response.render('pages/cloud', {title: title});
 });
 
 app.get('/canvas', function(request, response) {
