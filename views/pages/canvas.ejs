@@ -80,22 +80,23 @@ body {
 
 #content{
     position: absolute;
+    width: 50%;
     top: 44px;
     left: 0px;
     right: 0px;
     bottom: 46px;
     overflow:hidden;
-    background-color:#00FFFF;
+    background-color:#ffcccc;
 }
 
 #content2{
     position: absolute;
+    width: 50%;
     top: 44px;
-    left: 1000px;
     right: 0px;
     bottom: 46px;
     overflow:hidden;
-    background-color:#00FFFF;
+    background-color:#ff99ff;
 }
 
 #canvasImg{
@@ -149,6 +150,7 @@ body {
   
 var ctx, color = "#000";  
 document.addEventListener( "DOMContentLoaded", function(){
+  
   // setup a new canvas for drawing wait for device init
     setTimeout(function(){
      newCanvas();
@@ -186,7 +188,7 @@ function saveImage() {
       //img.src = "https://www.hallaminternet.com/assets/URL-tagging-image.png";  
       img.src = dataURL;
 
-      document.getElementById('content').appendChild(img); 
+      document.getElementById('content2').appendChild(img); 
 }
     
 function selectColor(el){
@@ -279,8 +281,8 @@ var drawMouse = function() {
 
  
 
-    <div id="content" class= "icon"><p style="text-align:center">Loading Canvas...</p></div> 
-      <div id="content2" class="icon">
+    <div id="content"><p style="text-align:center">Loading Canvas...</p></div> 
+      <div id="content2">
              <img id="canvasImg" style="display:none">
       </div>
  
