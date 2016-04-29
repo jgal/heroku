@@ -6,15 +6,15 @@ var app = express()
 app.set('port', (process.env.PORT || 5000))
 
 // Process application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({extended: false}))
+//app.use(bodyParser.urlencoded({extended: false}))
 
 // Process application/json
-app.use(bodyParser.json())
+//app.use(bodyParser.json())
 
 // Index route
-app.get('/', function (req, res) {
+/*app.get('/', function (req, res) {
     res.send('Hello world, I am a chat bot')
-})
+})*/
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
@@ -24,7 +24,7 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-var title = 'heyyy'
+var title = 'LOL'
 
 app.get('/cloud', function(request, response) {
     response.render('pages/cloud', {title: title});
